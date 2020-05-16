@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modal Box</title>
+        <link href="modal.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h2>Modal Box for 30Daysofcode</h2>
+        <button valign="center" onclick="document.getElementById('modalBox').style.display='block'">
+            Open The Modal Box
+        </button>
+        <div id="modalBox" class="modalContent">
+            <span onclick="document.getElementById('modalBox').style.display='none'" class="closeModal" title="Close Modal"></span>
+            <form class="modalForm">
+                <div class="container">
+                    <h1>The Modal Box</h1>
+                    <p>Close It or Leave It?</p>
+                </div>
+                <div class="clearFix">
+                    <button type="button" onclick="document.getElementById('modalBox').style.display='block'" class="cancelBtn">
+                        Leave It
+                    </button>
+                    <button type="button" onclick="document.getElementById('modalBox').style.display='none'" class="closeBtn">
+                        Close It
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            var modal = document.getElementById('modalBox');
+            window.onclick =function(event){
+                if (event.target == modal){
+                    modal.style.display ="none";
+                }
+            }
+        </script>
+    </body>
+</html>
